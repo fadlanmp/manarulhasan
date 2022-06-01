@@ -1,0 +1,20 @@
+.jumbotron {
+    padding: 2rem 1rem;
+    background-color: aliceblue;
+}
+
+#tentang {
+    background-color: #f3efcc;
+}
+
+#kontak {
+    background-color: #f3efcc;
+}
+
+section {
+    padding: 4rem;
+}
+
+footer {
+    background-color: #32502e;
+}
