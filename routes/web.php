@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterUstadController;
+use App\Http\Controllers\RegisterSantriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +21,9 @@ Route::get('/', function () {
         "title" => ""
     ]);
 });
-Route::get('/login', function () {
-    return view('login',[
-        "title" => " || Login"
-    ]);
-});
+Route::get('/login', [LoginController::class, 'index']);
+
+Route::get('/registerSantri', [RegisterSantriController::class, 'index']);
+
+Route::get('/registerUstad', [RegisterUstadController::class, 'index']);
+Route::post('/registerUstad', [RegisterUstadController::class, 'store']);
