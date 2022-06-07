@@ -27,3 +27,9 @@ Route::get('/registerSantri', [RegisterSantriController::class, 'index']);
 
 Route::get('/registerUstad', [RegisterUstadController::class, 'index']);
 Route::post('/registerUstad', [RegisterUstadController::class, 'store']);
+
+Route::get('/coba', function(){
+    return view('kitab', [
+        "title" => "|| Daftar Kitab"
+    ]);
+});
